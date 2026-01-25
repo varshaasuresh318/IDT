@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartWood – Carpenter Marketplace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f4f4;color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  padding:15px 20px;
+  text-align:center;
+}
+nav{
+  margin-top:8px;
+}
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+}
+
+/* HERO */
+.hero{
+  height:75vh;
+  background:url("https://images.unsplash.com/photo-1582582421892-16c3c5e2a8f7") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+.hero-content{
+  position:relative;
+  color:#fff;
+  max-width:700px;
+}
+.hero-content h2{font-size:40px;margin-bottom:15px}
+.hero-content p{font-size:17px;margin-bottom:25px}
+
+.hero-content button{
+  padding:12px 20px;
+  margin:5px;
+  border:none;
+  cursor:pointer;
+  font-size:15px;
+  background:#fff;
+  color:#000;
+}
+.hero-content button:hover{background:#f2f2f2}
+
+/* SECTIONS */
+.section-title{
+  padding:25px 20px 10px;
+  font-size:22px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  padding:10px 20px 30px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #ddd;
+  padding:12px;
+  transition:transform 0.2s;
+}
+.card:hover{transform:scale(1.03)}
+
+.image-box{
+  height:150px;
+  border:1px dashed #bbb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+  color:#888;
+}
+
+/* REVIEW FORM */
+.review-form input, .review-form textarea{
+  width:100%;
+  margin:6px 0;
+  padding:8px;
+}
+.review-form button{
+  padding:8px 14px;
+  background:#333;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+
+footer{
+  background:#fff;
+  border-top:1px solid #ddd;
+  text-align:center;
+  padding:15px;
+  font-size:12px;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SmartWood</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Marketplace</a>
+    <a href="#carpenters">Carpenters</a>
+    <a href="#upload">Sell</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Handcrafted Furniture by Local Carpenters</h2>
+    <p>Pepperfry-style marketplace focused on empowering individual artisans.</p>
+    <button onclick="scrollToSection('products')">Browse Furniture</button>
+    <button onclick="scrollToSection('upload')">Start Your Woodshop</button>
+  </div>
+</section>
+
+<div id="products" class="section-title">Trending Products</div>
+<section class="grid">
+  <div class="card">
+    <div class="image-box">Product Image</div>
+    Rustic Coffee Table<br>
+    <small>By Ramesh • ₹8,500</small>
+  </div>
+  <div class="card">
+    <div class="image-box">Product Image</div>
+    Hand-carved Wall Art<br>
+    <small>By Mahesh • ₹4,200</small>
+  </div>
+</section>
+
+<div id="carpenters" class="section-title">Featured Carpenters</div>
+<section class="grid">
+  <div class="card">
+    <strong>Ramesh Kumar</strong><br>
+    12 Years Experience<br>
+    Karnataka<br>
+    ⭐ 4.8
+  </div>
+  <div class="card">
+    <strong>
