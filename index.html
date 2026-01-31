@@ -1,166 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SmartWood – Carpenter Marketplace</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartwood – Empowering Artisans</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f4f4f4;color:#333}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-/* HEADER */
-header{
-  background:#fff;
-  border-bottom:1px solid #ddd;
-  padding:15px 20px;
-  text-align:center;
-}
-nav{
-  margin-top:8px;
-}
-nav a{
-  margin:0 12px;
-  text-decoration:none;
-  color:#444;
-  font-weight:500;
-}
+    body {
+      background-color: #f7efe6;
+      color: #4b2e1e;
+    }
 
-/* HERO */
-.hero{
-  height:75vh;
-  background:url("https://images.unsplash.com/photo-1582582421892-16c3c5e2a8f7") center/cover no-repeat;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.45);
-}
-.hero-content{
-  position:relative;
-  color:#fff;
-  max-width:700px;
-}
-.hero-content h2{font-size:40px;margin-bottom:15px}
-.hero-content p{font-size:17px;margin-bottom:25px}
+    /* ---------- HEADER ---------- */
+    header {
+      background: #fdf5ec;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
 
-.hero-content button{
-  padding:12px 20px;
-  margin:5px;
-  border:none;
-  cursor:pointer;
-  font-size:15px;
-  background:#fff;
-  color:#000;
-}
-.hero-content button:hover{background:#f2f2f2}
+    header h2 {
+      font-size: 22px;
+      font-weight: bold;
+    }
 
-/* SECTIONS */
-.section-title{
-  padding:25px 20px 10px;
-  font-size:22px;
-  font-weight:bold;
-  text-align:center;
-}
+    header .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  padding:10px 20px 30px;
-}
+    /* ---------- HERO ---------- */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1604328471151-b52226907017") center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
 
-.card{
-  background:#fff;
-  border:1px solid #ddd;
-  padding:12px;
-  transition:transform 0.2s;
-}
-.card:hover{transform:scale(1.03)}
+    .hero-content {
+      max-width: 500px;
+    }
 
-.image-box{
-  height:150px;
-  border:1px dashed #bbb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:10px;
-  color:#888;
-}
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-/* REVIEW FORM */
-.review-form input, .review-form textarea{
-  width:100%;
-  margin:6px 0;
-  padding:8px;
-}
-.review-form button{
-  padding:8px 14px;
-  background:#333;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-}
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
 
-footer{
-  background:#fff;
-  border-top:1px solid #ddd;
-  text-align:center;
-  padding:15px;
-  font-size:12px;
-  color:#777;
-}
-</style>
+    .btn {
+      background: #5a2d1b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    /* ---------- SECTION ---------- */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 17px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* ---------- CARDS ---------- */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin: 15px 0;
+    }
+
+    /* ---------- COLLECTION ---------- */
+    .collection {
+      background: #fdf5ec;
+    }
+
+    .collection img {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      background: #5a2d1b;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #fdf5ec;
+      padding: 40px 20px;
+      text-align: left;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer p, footer a {
+      color: #4b2e1e;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>SmartWood</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#products">Marketplace</a>
-    <a href="#carpenters">Carpenters</a>
-    <a href="#upload">Sell</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h2>Smartwood</h2>
+    <div class="menu">☰</div>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Handcrafted Furniture by Local Carpenters</h2>
-    <p>Pepperfry-style marketplace focused on empowering individual artisans.</p>
-    <button onclick="scrollToSection('products')">Browse Furniture</button>
-    <button onclick="scrollToSection('upload')">Start Your Woodshop</button>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Empowering Artisans</h1>
+      <p>Discover exquisite handcrafted wood carvings made by skilled artisans.</p>
+      <a href="#" class="btn">Explore Products →</a>
+    </div>
   </div>
-</section>
 
-<div id="products" class="section-title">Trending Products</div>
-<section class="grid">
-  <div class="card">
-    <div class="image-box">Product Image</div>
-    Rustic Coffee Table<br>
-    <small>By Ramesh • ₹8,500</small>
-  </div>
-  <div class="card">
-    <div class="image-box">Product Image</div>
-    Hand-carved Wall Art<br>
-    <small>By Mahesh • ₹4,200</small>
-  </div>
-</section>
+  <!-- MISSION -->
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      At Smartwood, we believe in preserving traditional craftsmanship while empowering local artisans.
+      Every piece tells a story of dedication, skill, and cultural heritage.
+    </p>
+  </section>
 
-<div id="carpenters" class="section-title">Featured Carpenters</div>
-<section class="grid">
-  <div class="card">
-    <strong>Ramesh Kumar</strong><br>
-    12 Years Experience<br>
-    Karnataka<br>
-    ⭐ 4.8
-  </div>
-  <div class="card">
-    <strong>
+  <!-- WHY CHOOSE -->
+  <section>
+    <h2>Why Choose Smartwood</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Master Craftsmanship</h3>
+        <p>Each piece is meticulously handcrafted by experienced artisans.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Designs</h3>
+        <p>Upload your own designs and we bring your vision to life.</p>
+      </div>
+
+      <div class="card">
+        <h3>Authentic Materials</h3>
+        <p>We use premium quality, ethically sourced wood.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection">
+    <h2>Exquisite Wood Carvings</h2>
+    <p>
+      From decorative pieces to functional furniture, our artisans blend tradition with modern aesthetics.
+    </p>
+    <a href="#" class="btn">View Collection →</a>
+
+    <img src="https://images.unsplash.com/photo-1582582494700-ec7f52a918c5" alt="Wood carvings">
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Order?</h2>
+    <p>Browse our collection and place your order today. We deliver across India.</p>
+    <br>
+    <a href="#" class="btn">Start Shopping →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Smartwood</h3>
+        <p>Empowering artisans through traditional craftsmanship.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#">Products</a></p>
+        <p><a href="#">Artisans</a></p>
+        <p><a href="#">Order</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: info@smartwood.com</p>
+        <p>Phone: +91 1234567890</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
